@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Incrementing Mind Map</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- Axios library-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <div id="header">
+          <h1><a href="index.html">MemoryForge</a></h1>
+            <ul>
+              <li>About</li>
+              <li><a href="sets.html">Sets</a></li>
+            </ul>
+        </div>
+      </header>
+
+      <br>
+    </main>
+      <div id="mynetwork"></div>
+      <div class="input-container">
+        <input type="text" id="node-label-input" placeholder="label">
+      </div>
+      <script src="main.js"></script>
+      <script src="mongo.js"></script>
+  </body>
+
+</html>
