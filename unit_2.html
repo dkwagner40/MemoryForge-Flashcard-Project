@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Flashcards</title>
+</head>
+<body>
+  <main>
+    <header>
+
+      <div id="header">
+        <h1><a href="index.html">BrainBytes</a></h1>
+        <ul>
+          <li><a href="main.html"><button id="return"><i class="fas fa-arrow-left"> Return</i></button></li></a>
+          <li>About</li>
+          <li><a href="sets.html">Sets</a></li>
+        </ul>
+      </div>
+    </header>
+    
+      <section>
+        <div class="card-container" id="card-container" hidden>
+            <div class="card" id="flashcard" hidden>
+              <div class="front" id="front-side" hidden>
+                <h1 id="front-text">Front Side</h1>
+              </div>
+              <div class="back" id="back-side" hidden>
+                <h1 id="back-text">Back Side</h1>
+              </div>
+            </div>
+        </div>
+      </section>
+      <br>
+    
+    <ul id="card-list"></ul>
+     
+    <script src="client_2.js"></script>
+    <!--<script src="hide.js"></script> -->
+  </main>
+</body>
+</html> 

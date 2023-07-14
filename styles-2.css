@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: rgb(86, 219, 25);
+}
+
+button{
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: antiquewhite;
+  border-color: transparent;
+}
+
+button:hover{
+  background-color: rgb(173, 173, 173);
+  border-color: transparent;
+}
+
+.create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70px;
+    margin-top: 80px;
+}
+
+#show_card_box {
+    height: 500px;
+    width: 500px;
+    background-color: antiquewhite;
+    font-size: 100px;
+}
+
+#show_card_box:hover {
+    background-color: rgb(173, 173, 173);
+}
+
+#delete_cards {
+    display: inline;
+    margin-top: 10px;
+    background-color: antiquewhite;
+}
+
+#delete_cards:hover {
+    background-color: rgb(173, 173, 173);
+}
+
+#add_to_set {
+  display: inline;
+  margin-top: 10px;
+  background-color: antiquewhite;
+}
+
+#add_to_set:hover {
+  background-color: rgb(173, 173, 173);
+}
+
+.container{
+  width: 1280px;
+  margin: auto;
+}
+
+header{background-color: #fff;}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+  padding: 0 20px;
+  background: #fff;
+}
+
+#header button{
+  font-family: inherit;
+  border: 1px solid red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color:rgb(173, 173, 173);
+}
+
+li {
+  text-decoration: none;
+  display: inline;
+  padding: 15px;
+  font-size: large;
+}
+
+#create_card{
+  display: none;
+  width: 370px;
+  margin:auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: whitesmoke;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+}
+
+#create_card h2{
+  color: black;
+  text-align: center;
+}
+
+#create_card textarea{
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  border: 1px solid lightgray;
+  resize: none;
+}
+
+#create_card button{width: fit-content;}
+
+#flashcards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
+.flashcard{
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.flashcard h2{font-size: 1rem;}
+
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .flashcard{margin: auto;}
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #create_card{width: 95%;}
+
+  .flashcard{width: 100%;}
+
+}
+
+.card-container {
+    perspective: 1000px;
+    position: relative;
+    width: 1800px;
+    height: 500px;
+    transform-style: preserve-3d; /*this is where Javascript uses Flip */
+    transition: transform 0.5s;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  #card-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+  }
+  
+.card {
+    width: 300px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    border: 1px solid #ccc;
+    margin: 10px;
+  }
+  
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*this is where Javascript uses Flip */
+  }
+  
+.front {
+    background-color: antiquewhite;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+.back {
+    background-color: antiquewhite;
+    transform: rotateY(180deg); /*this is where Javascript uses Flip */
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+.flipped {
+    transform: rotateY(180deg);
+  }
