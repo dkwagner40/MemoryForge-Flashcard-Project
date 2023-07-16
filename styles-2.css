@@ -45,22 +45,14 @@ button:hover{
     background-color: rgb(173, 173, 173);
 }
 
-#delete_cards {
-    display: inline;
-    margin-top: 10px;
-    background-color: antiquewhite;
-}
-
-#delete_cards:hover {
-    background-color: rgb(173, 173, 173);
-}
-
+#delete_cards,
 #add_to_set {
   display: inline;
   margin-top: 10px;
   background-color: antiquewhite;
 }
 
+#delete_cards:hover,
 #add_to_set:hover {
   background-color: rgb(173, 173, 173);
 }
@@ -127,17 +119,6 @@ li {
 
 #create_card button{width: fit-content;}
 
-#flashcards{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: auto;
-  margin-top: 10px;
-  padding: 0px 10px;
-}
-
 .flashcard{
   width: 370px;
   height: 200px;
@@ -157,11 +138,7 @@ li {
 
 @media(max-width:768px){
   .flashcard{margin: auto;}
-
-  .flashcard{
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+  .flashcard{margin-top: 10px; margin-bottom: 10px;}
 }
 
 @media(max-width:480px){
@@ -173,9 +150,7 @@ li {
   }
 
   #create_card{width: 95%;}
-
   .flashcard{width: 100%;}
-
 }
 
 .card-container {
@@ -183,7 +158,7 @@ li {
     position: relative;
     width: 1800px;
     height: 500px;
-    transform-style: preserve-3d; /*this is where Javascript uses Flip */
+    transform-style: preserve-3d;
     transition: transform 0.5s;
     margin: 0 auto;
     display: inline-flex;
@@ -204,6 +179,9 @@ li {
     transition: transform 0.5s;
     border: 1px solid #ccc;
     margin: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 10px;
   }
   
 .front,
@@ -211,7 +189,10 @@ li {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /*this is where Javascript uses Flip */
+    backface-visibility: hidden;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
   }
   
 .front {
@@ -223,7 +204,7 @@ li {
   
 .back {
     background-color: antiquewhite;
-    transform: rotateY(180deg); /*this is where Javascript uses Flip */
+    transform: rotateY(180deg); 
     padding: 5px;
     text-align: center;
     border-radius: 5px;
